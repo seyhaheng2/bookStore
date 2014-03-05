@@ -1,4 +1,13 @@
 BookStore::Application.routes.draw do
+  get "store/index"
+  get "store/show"
+  resources :line_items
+
+  resources :carts
+
+  resources :products
+  root 'store#index', as: "store"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
